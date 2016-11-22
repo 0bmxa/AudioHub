@@ -20,18 +20,6 @@
 			name = AudioHubInstaller;
 			productName = AudioHubInstaller;
 		};
-		28468DE41BF06D380063D71C /* UltraschallHubInstaller */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 28468DEA1BF06D380063D71C /* Build configuration list for PBXAggregateTarget "UltraschallHubInstaller" */;
-			buildPhases = (
-				28468DE91BF06D380063D71C /* ShellScript */,
-			);
-			dependencies = (
-				28468DEE1BF06D650063D71C /* PBXTargetDependency */,
-			);
-			name = UltraschallHubInstaller;
-			productName = AudioHubInstaller;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
@@ -55,18 +43,9 @@
 		281F1A9F1BAEA4B000FC62E1 /* AudioHubViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 281F1A9D1BAEA4B000FC62E1 /* AudioHubViewController.h */; };
 		281F1AA01BAEA4B000FC62E1 /* AudioHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281F1A9E1BAEA4B000FC62E1 /* AudioHubViewController.m */; };
 		281F1AA61BAEABC700FC62E1 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 281F1AA51BAEABC700FC62E1 /* Icon.icns */; };
-		283686611BE978FA005A6C34 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501151BA639C000B847E4 /* CoreAudio.framework */; };
-		283686621BE97900005A6C34 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501171BA639C800B847E4 /* CoreFoundation.framework */; };
-		283686631BE97905005A6C34 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501191BA639CD00B847E4 /* Accelerate.framework */; };
-		283853D31BEC0EB5001E80D1 /* Device.icns in Resources */ = {isa = PBXBuildFile; fileRef = 283853D11BEC0EB5001E80D1 /* Device.icns */; };
-		283853D41BEC0EB5001E80D1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 283853D21BEC0EB5001E80D1 /* Info.plist */; };
-		283853D51BEC0EC7001E80D1 /* Device.icns in Resources */ = {isa = PBXBuildFile; fileRef = 283853D11BEC0EB5001E80D1 /* Device.icns */; };
-		283853D71BEC12CE001E80D1 /* Ultraschall.ahc in Resources */ = {isa = PBXBuildFile; fileRef = 283853D61BEC12CE001E80D1 /* Ultraschall.ahc */; };
-		283853D81BEC12D4001E80D1 /* Ultraschall.ahc in Resources */ = {isa = PBXBuildFile; fileRef = 283853D61BEC12CE001E80D1 /* Ultraschall.ahc */; };
 		2843858E1BB321B9002DC114 /* CAHALAudioObjectTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2843858C1BB321B9002DC114 /* CAHALAudioObjectTester.cpp */; };
 		284385901BB32208002DC114 /* AudioHubBoxTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2843858F1BB32208002DC114 /* AudioHubBoxTests.mm */; };
 		284385911BB345B7002DC114 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 286333B61BA7D26A0048DD0B /* Settings.m */; };
-		284B194B1BF0B8F00071FA10 /* Tests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 284B194A1BF0B8F00071FA10 /* Tests.plist */; };
 		286333B71BA7D26A0048DD0B /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = 286333B51BA7D26A0048DD0B /* Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		286333B81BA7D26A0048DD0B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 286333B61BA7D26A0048DD0B /* Settings.m */; };
 		286333BB1BA7D2F90048DD0B /* Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 286333B91BA7D2F90048DD0B /* Manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,34 +59,7 @@
 		286EF26D1BA8350800AC4657 /* CAHALAudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500DB1BA6392800B847E4 /* CAHALAudioDevice.cpp */; };
 		286EF26E1BA8351000AC4657 /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500C91BA6392800B847E4 /* CACFString.cpp */; };
 		286EF26F1BA8351700AC4657 /* CAHALAudioStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500DF1BA6392800B847E4 /* CAHALAudioStream.cpp */; };
-		28752EF01BEF87D1007CF026 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 286333B61BA7D26A0048DD0B /* Settings.m */; };
-		28752EF11BEF87D1007CF026 /* CACFArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500B81BA6392800B847E4 /* CACFArray.cpp */; };
-		28752EF21BEF87D1007CF026 /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500E81BA6392800B847E4 /* CAMutex.cpp */; };
-		28752EF31BEF87D1007CF026 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500F91BA6392800B847E4 /* CAStreamBasicDescription.cpp */; };
-		28752EF41BEF87D1007CF026 /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500E31BA6392800B847E4 /* CAHostTimeBase.cpp */; };
-		28752EF51BEF87D1007CF026 /* CACFDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500BB1BA6392800B847E4 /* CACFDictionary.cpp */; };
-		28752EF61BEF87D1007CF026 /* CAVolumeCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280501031BA6392800B847E4 /* CAVolumeCurve.cpp */; };
-		28752EF71BEF87D1007CF026 /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500F11BA6392800B847E4 /* CARingBuffer.cpp */; };
-		28752EF81BEF87D1007CF026 /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500C91BA6392800B847E4 /* CACFString.cpp */; };
-		28752EF91BEF87D1007CF026 /* CADispatchQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805011B1BA63A7100B847E4 /* CADispatchQueue.cpp */; };
-		28752EFA1BEF87D1007CF026 /* AudioHubStreamTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 286719441BC7548300E4B66A /* AudioHubStreamTests.mm */; };
-		28752EFB1BEF87D1007CF026 /* AudioHubDeviceTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 286719421BC7546D00E4B66A /* AudioHubDeviceTests.mm */; };
-		28752EFC1BEF87D1007CF026 /* CAObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805001A1BA6386700B847E4 /* CAObject.cpp */; };
-		28752EFD1BEF87D1007CF026 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500161BA637FA00B847E4 /* Box.cpp */; };
-		28752EFE1BEF87D1007CF026 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500131BA637EC00B847E4 /* Device.cpp */; };
-		28752EFF1BEF87D1007CF026 /* AudioHubBoxTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2843858F1BB32208002DC114 /* AudioHubBoxTests.mm */; };
-		28752F001BEF87D1007CF026 /* CAHALAudioObjectTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2843858C1BB321B9002DC114 /* CAHALAudioObjectTester.cpp */; };
-		28752F011BEF87D1007CF026 /* AudioHubPluginTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 286719401BC7545800E4B66A /* AudioHubPluginTests.mm */; };
-		28752F021BEF87D1007CF026 /* DeviceList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500101BA637E400B847E4 /* DeviceList.cpp */; };
-		28752F031BEF87D1007CF026 /* PlugIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805000D1BA637D600B847E4 /* PlugIn.cpp */; };
-		28752F041BEF87D1007CF026 /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805000A1BA637C100B847E4 /* Factory.cpp */; };
-		28752F051BEF87D1007CF026 /* AudioHubDeviceListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28BBF2001BA6D8D00063B59A /* AudioHubDeviceListTests.mm */; };
-		28752F071BEF87D1007CF026 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501191BA639CD00B847E4 /* Accelerate.framework */; };
-		28752F081BEF87D1007CF026 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501151BA639C000B847E4 /* CoreAudio.framework */; };
-		28752F091BEF87D1007CF026 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280501171BA639C800B847E4 /* CoreFoundation.framework */; };
 		28752F111BEFAB00007CF026 /* AudioHubFactoryTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28752F101BEFAB00007CF026 /* AudioHubFactoryTests.mm */; };
-		28752F121BEFAB00007CF026 /* AudioHubFactoryTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28752F101BEFAB00007CF026 /* AudioHubFactoryTests.mm */; };
-		28752F141BF067CC007CF026 /* Ultraschall.ahc in Resources */ = {isa = PBXBuildFile; fileRef = 283853D61BEC12CE001E80D1 /* Ultraschall.ahc */; };
 		2887AE0F1BB0144F007BC62C /* Cells.h in Headers */ = {isa = PBXBuildFile; fileRef = 2887AE0D1BB0144F007BC62C /* Cells.h */; };
 		2887AE101BB0144F007BC62C /* Cells.m in Sources */ = {isa = PBXBuildFile; fileRef = 2887AE0E1BB0144F007BC62C /* Cells.m */; };
 		28BBF1F81BA6D7C60063B59A /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500C91BA6392800B847E4 /* CACFString.cpp */; };
@@ -145,21 +97,6 @@
 		28D8D5B01BB5D16D007817D2 /* CAHALAudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500DB1BA6392800B847E4 /* CAHALAudioDevice.cpp */; };
 		28D8D5B11BB5D178007817D2 /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500C91BA6392800B847E4 /* CACFString.cpp */; };
 		28D8D5B21BB5D181007817D2 /* CAHALAudioStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500DF1BA6392800B847E4 /* CAHALAudioStream.cpp */; };
-		28E4CF321BEB75F900F3A29A /* CACFArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500B81BA6392800B847E4 /* CACFArray.cpp */; };
-		28E4CF331BEB75FF00F3A29A /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500E81BA6392800B847E4 /* CAMutex.cpp */; };
-		28E4CF341BEB760800F3A29A /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500F91BA6392800B847E4 /* CAStreamBasicDescription.cpp */; };
-		28E4CF351BEB760D00F3A29A /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500E31BA6392800B847E4 /* CAHostTimeBase.cpp */; };
-		28E4CF361BEB761200F3A29A /* CACFDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500BB1BA6392800B847E4 /* CACFDictionary.cpp */; };
-		28E4CF371BEB7C3D00F3A29A /* CAVolumeCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280501031BA6392800B847E4 /* CAVolumeCurve.cpp */; };
-		28E4CF381BEB7C4300F3A29A /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500F11BA6392800B847E4 /* CARingBuffer.cpp */; };
-		28E4CF391BEB7C4900F3A29A /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500C91BA6392800B847E4 /* CACFString.cpp */; };
-		28E4CF3A1BEB7C5100F3A29A /* PlugIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805000D1BA637D600B847E4 /* PlugIn.cpp */; };
-		28E4CF3B1BEB7C5900F3A29A /* CADispatchQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805011B1BA63A7100B847E4 /* CADispatchQueue.cpp */; };
-		28E4CF3C1BEB7C5D00F3A29A /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805000A1BA637C100B847E4 /* Factory.cpp */; };
-		28E4CF3D1BEB7C6400F3A29A /* DeviceList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500101BA637E400B847E4 /* DeviceList.cpp */; };
-		28E4CF3E1BEB7C6A00F3A29A /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500131BA637EC00B847E4 /* Device.cpp */; };
-		28E4CF3F1BEB7C6F00F3A29A /* CAObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2805001A1BA6386700B847E4 /* CAObject.cpp */; };
-		28E4CF401BEB7C7600F3A29A /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 280500161BA637FA00B847E4 /* Box.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,20 +127,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 281F1A881BAE8ECC00FC62E1;
 			remoteInfo = AudioHubPreferences;
-		};
-		28468DED1BF06D650063D71C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2805FFA41BA636B100B847E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 288F02DD1BE9376300C8FC9C;
-			remoteInfo = UltraschallHub;
-		};
-		28752EEE1BEF87D1007CF026 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2805FFA41BA636B100B847E4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2805FFAB1BA636B100B847E4;
-			remoteInfo = AudioHub;
 		};
 		28E33A801BB7F6C300B1BE75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -373,15 +296,9 @@
 		281F1A9D1BAEA4B000FC62E1 /* AudioHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioHubViewController.h; sourceTree = "<group>"; };
 		281F1A9E1BAEA4B000FC62E1 /* AudioHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioHubViewController.m; sourceTree = "<group>"; };
 		281F1AA51BAEABC700FC62E1 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
-		283853D11BEC0EB5001E80D1 /* Device.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Device.icns; path = Ultraschall/Device.icns; sourceTree = "<group>"; };
-		283853D21BEC0EB5001E80D1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Ultraschall/Info.plist; sourceTree = "<group>"; };
-		283853D61BEC12CE001E80D1 /* Ultraschall.ahc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Ultraschall.ahc; path = Ultraschall/Ultraschall.ahc; sourceTree = "<group>"; };
 		2843858C1BB321B9002DC114 /* CAHALAudioObjectTester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAHALAudioObjectTester.cpp; sourceTree = "<group>"; };
 		2843858D1BB321B9002DC114 /* CAHALAudioObjectTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHALAudioObjectTester.h; sourceTree = "<group>"; };
 		2843858F1BB32208002DC114 /* AudioHubBoxTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubBoxTests.mm; sourceTree = "<group>"; };
-		284B194A1BF0B8F00071FA10 /* Tests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Tests.plist; path = Ultraschall/Tests.plist; sourceTree = "<group>"; };
-		284B19511BF0B9C50071FA10 /* postinstall */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = postinstall; path = Ultraschall/Installer/Scripts/postinstall; sourceTree = "<group>"; };
-		284B19521BF0B9C50071FA10 /* preinstall */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = preinstall; path = Ultraschall/Installer/Scripts/preinstall; sourceTree = "<group>"; };
 		286333B51BA7D26A0048DD0B /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		286333B61BA7D26A0048DD0B /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		286333B91BA7D2F90048DD0B /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
@@ -389,14 +306,10 @@
 		286719401BC7545800E4B66A /* AudioHubPluginTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubPluginTests.mm; sourceTree = "<group>"; };
 		286719421BC7546D00E4B66A /* AudioHubDeviceTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubDeviceTests.mm; sourceTree = "<group>"; };
 		286719441BC7548300E4B66A /* AudioHubStreamTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubStreamTests.mm; sourceTree = "<group>"; };
-		28752F0E1BEF87D1007CF026 /* UltraschallHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraschallHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28752F101BEFAB00007CF026 /* AudioHubFactoryTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubFactoryTests.mm; sourceTree = "<group>"; };
-		28752F131BF06512007CF026 /* UltraschallHubTestTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UltraschallHubTestTypes.h; path = Ultraschall/UltraschallHubTestTypes.h; sourceTree = "<group>"; };
 		28752F151BF06A8A007CF026 /* AudioHubTestTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHubTestTypes.h; sourceTree = "<group>"; };
 		2887AE0D1BB0144F007BC62C /* Cells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cells.h; sourceTree = "<group>"; };
 		2887AE0E1BB0144F007BC62C /* Cells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cells.m; sourceTree = "<group>"; };
-		288F02D91BE936F300C8FC9C /* UltraschallHubTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UltraschallHubTypes.h; path = Ultraschall/UltraschallHubTypes.h; sourceTree = "<group>"; };
-		288F02DE1BE9376300C8FC9C /* UltraschallHub.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UltraschallHub.driver; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BBF2001BA6D8D00063B59A /* AudioHubDeviceListTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioHubDeviceListTests.mm; sourceTree = "<group>"; };
 		28D8D5AA1BB5C8BF007817D2 /* Device.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Device.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -442,26 +355,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28752F061BEF87D1007CF026 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28752F071BEF87D1007CF026 /* Accelerate.framework in Frameworks */,
-				28752F081BEF87D1007CF026 /* CoreAudio.framework in Frameworks */,
-				28752F091BEF87D1007CF026 /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		288F02DB1BE9376300C8FC9C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				283686631BE97905005A6C34 /* Accelerate.framework in Frameworks */,
-				283686621BE97900005A6C34 /* CoreFoundation.framework in Frameworks */,
-				283686611BE978FA005A6C34 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +513,6 @@
 		2805FFA31BA636B100B847E4 = {
 			isa = PBXGroup;
 			children = (
-				288F02D81BE936AB00C8FC9C /* UltraschallHub */,
 				286333BD1BA7D37B0048DD0B /* Frameworks */,
 				280500071BA6377F00B847E4 /* Installer */,
 				2805FFAE1BA636B100B847E4 /* AudioHub */,
@@ -640,8 +532,6 @@
 				2805FFF21BA6375000B847E4 /* AudioHubManagerTests.xctest */,
 				2805010D1BA6398C00B847E4 /* AudioHubTests.xctest */,
 				281F1A891BAE8ECC00FC62E1 /* AudioHubPreferences.prefPane */,
-				288F02DE1BE9376300C8FC9C /* UltraschallHub.driver */,
-				28752F0E1BEF87D1007CF026 /* UltraschallHubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -720,15 +610,6 @@
 			path = AudioHubPreferences;
 			sourceTree = SOURCE_ROOT;
 		};
-		284B19501BF0B9BA0071FA10 /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				284B19511BF0B9C50071FA10 /* postinstall */,
-				284B19521BF0B9C50071FA10 /* preinstall */,
-			);
-			name = Scripts;
-			sourceTree = "<group>";
-		};
 		286333BD1BA7D37B0048DD0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,20 +618,6 @@
 				280501151BA639C000B847E4 /* CoreAudio.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		288F02D81BE936AB00C8FC9C /* UltraschallHub */ = {
-			isa = PBXGroup;
-			children = (
-				284B19501BF0B9BA0071FA10 /* Scripts */,
-				284B194A1BF0B8F00071FA10 /* Tests.plist */,
-				283853D61BEC12CE001E80D1 /* Ultraschall.ahc */,
-				283853D11BEC0EB5001E80D1 /* Device.icns */,
-				283853D21BEC0EB5001E80D1 /* Info.plist */,
-				288F02D91BE936F300C8FC9C /* UltraschallHubTypes.h */,
-				28752F131BF06512007CF026 /* UltraschallHubTestTypes.h */,
-			);
-			name = UltraschallHub;
 			sourceTree = "<group>";
 		};
 		28BBF2021BA6DA020063B59A /* Tests */ = {
@@ -879,41 +746,6 @@
 			productReference = 281F1A891BAE8ECC00FC62E1 /* AudioHubPreferences.prefPane */;
 			productType = "com.apple.product-type.bundle";
 		};
-		28752EEC1BEF87D1007CF026 /* UltraschallHubTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28752F0B1BEF87D1007CF026 /* Build configuration list for PBXNativeTarget "UltraschallHubTests" */;
-			buildPhases = (
-				28752EEF1BEF87D1007CF026 /* Sources */,
-				28752F061BEF87D1007CF026 /* Frameworks */,
-				28752F0A1BEF87D1007CF026 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				28752EED1BEF87D1007CF026 /* PBXTargetDependency */,
-			);
-			name = UltraschallHubTests;
-			productName = AudioHubTests;
-			productReference = 28752F0E1BEF87D1007CF026 /* UltraschallHubTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		288F02DD1BE9376300C8FC9C /* UltraschallHub */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 288F02E11BE9376300C8FC9C /* Build configuration list for PBXNativeTarget "UltraschallHub" */;
-			buildPhases = (
-				288F02DA1BE9376300C8FC9C /* Sources */,
-				288F02DB1BE9376300C8FC9C /* Frameworks */,
-				288F02DC1BE9376300C8FC9C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UltraschallHub;
-			productName = Hub;
-			productReference = 288F02DE1BE9376300C8FC9C /* UltraschallHub.driver */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -944,9 +776,6 @@
 					281F1A881BAE8ECC00FC62E1 = {
 						CreatedOnToolsVersion = 7.0;
 					};
-					288F02DD1BE9376300C8FC9C = {
-						CreatedOnToolsVersion = 7.1;
-					};
 				};
 			};
 			buildConfigurationList = 2805FFA71BA636B100B847E4 /* Build configuration list for PBXProject "AudioHub" */;
@@ -968,9 +797,6 @@
 				281F1A881BAE8ECC00FC62E1 /* AudioHubPreferences */,
 				2805FFF11BA6375000B847E4 /* AudioHubManagerTests */,
 				280DDE211BB8203C009D669B /* AudioHubInstaller */,
-				288F02DD1BE9376300C8FC9C /* UltraschallHub */,
-				28752EEC1BEF87D1007CF026 /* UltraschallHubTests */,
-				28468DE41BF06D380063D71C /* UltraschallHubInstaller */,
 			);
 		};
 /* End PBXProject section */
@@ -995,10 +821,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284B194B1BF0B8F00071FA10 /* Tests.plist in Resources */,
-				283853D41BEC0EB5001E80D1 /* Info.plist in Resources */,
-				283853D71BEC12CE001E80D1 /* Ultraschall.ahc in Resources */,
-				283853D31BEC0EB5001E80D1 /* Device.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,23 +840,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28752F0A1BEF87D1007CF026 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28752F141BF067CC007CF026 /* Ultraschall.ahc in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		288F02DC1BE9376300C8FC9C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				283853D81BEC12D4001E80D1 /* Ultraschall.ahc in Resources */,
-				283853D51BEC0EC7001E80D1 /* Device.icns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1050,19 +855,6 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"AudioHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/AudioHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\nSIGNING_IDENTITY=\"Developer ID Installer: Your Name\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"${SIGNING_IDENTITY}\" --scripts \"${SOURCE_ROOT}/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
-		};
-		28468DE91BF06D380063D71C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"UltraschallHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/UltraschallHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\nSIGNING_IDENTITY=\"Developer ID Installer: Your Name\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"${SIGNING_IDENTITY}\" --scripts \"${SOURCE_ROOT}/Ultraschall/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1158,58 +950,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28752EEF1BEF87D1007CF026 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28752EF01BEF87D1007CF026 /* Settings.m in Sources */,
-				28752EF11BEF87D1007CF026 /* CACFArray.cpp in Sources */,
-				28752EF21BEF87D1007CF026 /* CAMutex.cpp in Sources */,
-				28752F121BEFAB00007CF026 /* AudioHubFactoryTests.mm in Sources */,
-				28752EF31BEF87D1007CF026 /* CAStreamBasicDescription.cpp in Sources */,
-				28752EF41BEF87D1007CF026 /* CAHostTimeBase.cpp in Sources */,
-				28752EF51BEF87D1007CF026 /* CACFDictionary.cpp in Sources */,
-				28752EF61BEF87D1007CF026 /* CAVolumeCurve.cpp in Sources */,
-				28752EF71BEF87D1007CF026 /* CARingBuffer.cpp in Sources */,
-				28752EF81BEF87D1007CF026 /* CACFString.cpp in Sources */,
-				28752EF91BEF87D1007CF026 /* CADispatchQueue.cpp in Sources */,
-				28752EFA1BEF87D1007CF026 /* AudioHubStreamTests.mm in Sources */,
-				28752EFB1BEF87D1007CF026 /* AudioHubDeviceTests.mm in Sources */,
-				28752EFC1BEF87D1007CF026 /* CAObject.cpp in Sources */,
-				28752EFD1BEF87D1007CF026 /* Box.cpp in Sources */,
-				28752EFE1BEF87D1007CF026 /* Device.cpp in Sources */,
-				28752EFF1BEF87D1007CF026 /* AudioHubBoxTests.mm in Sources */,
-				28752F001BEF87D1007CF026 /* CAHALAudioObjectTester.cpp in Sources */,
-				28752F011BEF87D1007CF026 /* AudioHubPluginTests.mm in Sources */,
-				28752F021BEF87D1007CF026 /* DeviceList.cpp in Sources */,
-				28752F031BEF87D1007CF026 /* PlugIn.cpp in Sources */,
-				28752F041BEF87D1007CF026 /* Factory.cpp in Sources */,
-				28752F051BEF87D1007CF026 /* AudioHubDeviceListTests.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		288F02DA1BE9376300C8FC9C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28E4CF401BEB7C7600F3A29A /* Box.cpp in Sources */,
-				28E4CF3F1BEB7C6F00F3A29A /* CAObject.cpp in Sources */,
-				28E4CF3E1BEB7C6A00F3A29A /* Device.cpp in Sources */,
-				28E4CF3D1BEB7C6400F3A29A /* DeviceList.cpp in Sources */,
-				28E4CF3C1BEB7C5D00F3A29A /* Factory.cpp in Sources */,
-				28E4CF3B1BEB7C5900F3A29A /* CADispatchQueue.cpp in Sources */,
-				28E4CF3A1BEB7C5100F3A29A /* PlugIn.cpp in Sources */,
-				28E4CF391BEB7C4900F3A29A /* CACFString.cpp in Sources */,
-				28E4CF381BEB7C4300F3A29A /* CARingBuffer.cpp in Sources */,
-				28E4CF371BEB7C3D00F3A29A /* CAVolumeCurve.cpp in Sources */,
-				28E4CF361BEB761200F3A29A /* CACFDictionary.cpp in Sources */,
-				28E4CF351BEB760D00F3A29A /* CAHostTimeBase.cpp in Sources */,
-				28E4CF341BEB760800F3A29A /* CAStreamBasicDescription.cpp in Sources */,
-				28E4CF331BEB75FF00F3A29A /* CAMutex.cpp in Sources */,
-				28E4CF321BEB75F900F3A29A /* CACFArray.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1232,16 +972,6 @@
 			isa = PBXTargetDependency;
 			target = 281F1A881BAE8ECC00FC62E1 /* AudioHubPreferences */;
 			targetProxy = 280DDE271BB82042009D669B /* PBXContainerItemProxy */;
-		};
-		28468DEE1BF06D650063D71C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 288F02DD1BE9376300C8FC9C /* UltraschallHub */;
-			targetProxy = 28468DED1BF06D650063D71C /* PBXContainerItemProxy */;
-		};
-		28752EED1BEF87D1007CF026 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2805FFAB1BA636B100B847E4 /* AudioHub */;
-			targetProxy = 28752EEE1BEF87D1007CF026 /* PBXContainerItemProxy */;
 		};
 		28E33A811BB7F6C300B1BE75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1515,88 +1245,6 @@
 			};
 			name = Release;
 		};
-		28468DEB1BF06D380063D71C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		28468DEC1BF06D380063D71C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		28752F0C1BEF87D1007CF026 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ULTRASCHALL=1",
-					"TEST=1",
-				);
-				INFOPLIST_FILE = Ultraschall/Tests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHubTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		28752F0D1BEF87D1007CF026 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"TEST=1",
-					"ULTRASCHALL=1",
-				);
-				INFOPLIST_FILE = Ultraschall/Tests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHubTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		288F02E21BE9376300C8FC9C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = /tmp/UltraschallHub.dst;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ULTRASCHALL=1",
-				);
-				INFOPLIST_FILE = Ultraschall/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = driver;
-			};
-			name = Debug;
-		};
-		288F02E31BE9376300C8FC9C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = /tmp/UltraschallHub.dst;
-				GCC_PREPROCESSOR_DEFINITIONS = "ULTRASCHALL=1";
-				INFOPLIST_FILE = Ultraschall/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = driver;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1659,33 +1307,6 @@
 			buildConfigurations = (
 				281F1A961BAE8ECC00FC62E1 /* Debug */,
 				281F1A971BAE8ECC00FC62E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28468DEA1BF06D380063D71C /* Build configuration list for PBXAggregateTarget "UltraschallHubInstaller" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28468DEB1BF06D380063D71C /* Debug */,
-				28468DEC1BF06D380063D71C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28752F0B1BEF87D1007CF026 /* Build configuration list for PBXNativeTarget "UltraschallHubTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28752F0C1BEF87D1007CF026 /* Debug */,
-				28752F0D1BEF87D1007CF026 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		288F02E11BE9376300C8FC9C /* Build configuration list for PBXNativeTarget "UltraschallHub" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				288F02E21BE9376300C8FC9C /* Debug */,
-				288F02E31BE9376300C8FC9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

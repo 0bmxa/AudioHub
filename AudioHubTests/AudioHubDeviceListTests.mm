@@ -8,18 +8,10 @@
 
 #import <XCTest/XCTest.h>
 #include "DeviceList.h"
-#if !ULTRASCHALL
 #if !TEST
-#include "AudioHubTypes.h"
+#   include "AudioHubTypes.h"
 #else
-#include "AudioHubTestTypes.h"
-#endif
-#else
-#if !TEST
-#include "UltraschallHubTypes.h"
-#else
-#include "UltraschallHubTestTypes.h"
-#endif
+#   include "AudioHubTestTypes.h"
 #endif
 #include "CACFDictionary.h"
 #include "CACFArray.h"
