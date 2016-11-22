@@ -12,7 +12,7 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreAudio/CoreAudioTypes.h>
 
-static const CFStringRef kAudioHubBundleIdentifier = CFSTR("de.8plugs.audio.AudioHubTests");
+static const CFStringRef kAudioHubBundleIdentifier = CFSTR("audiohub.audiohub.AudioHubTests");
 static const CFStringRef kAudioHubManufacturer = CFSTR("ultraschall");
 
 static const CFStringRef kAudioHubBoxName = CFSTR("fm.ultraschall.audio.UltraschallHubBox");

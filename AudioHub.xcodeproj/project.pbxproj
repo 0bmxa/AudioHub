@@ -921,18 +921,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Daniel Lindenfelser";
+				ORGANIZATIONNAME = "AudioHub Project";
 				TargetAttributes = {
 					2805010C1BA6398C00B847E4 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 					2805FFAB1BA636B100B847E4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 53LA4N6GG6;
+						ProvisioningStyle = Automatic;
 					};
 					2805FFE81BA6375000B847E4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 53LA4N6GG6;
+						ProvisioningStyle = Automatic;
 					};
 					2805FFF11BA6375000B847E4 = {
 						CreatedOnToolsVersion = 7.0;
@@ -943,7 +943,6 @@
 					};
 					281F1A881BAE8ECC00FC62E1 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 53LA4N6GG6;
 					};
 					288F02DD1BE9376300C8FC9C = {
 						CreatedOnToolsVersion = 7.1;
@@ -1050,7 +1049,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"AudioHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/AudioHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"Developer ID Installer: Daniel Lindenfelser (53LA4N6GG6)\" --scripts \"${SOURCE_ROOT}/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
+			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"AudioHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/AudioHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\nSIGNING_IDENTITY=\"Developer ID Installer: Your Name\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"${SIGNING_IDENTITY}\" --scripts \"${SOURCE_ROOT}/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
 		};
 		28468DE91BF06D380063D71C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1063,7 +1062,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"UltraschallHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/UltraschallHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"Developer ID Installer: Daniel Lindenfelser (53LA4N6GG6)\" --scripts \"${SOURCE_ROOT}/Ultraschall/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
+			shellScript = "VERSION=$(date +%Y-%m-%d)\nPACKAGE_NAME=\"UltraschallHub-${VERSION}\"\nPACKAGE_ROOT=\"/tmp/UltraschallHub.dst\"\nARCHIVE_FILENAME=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.pkg\"\nARCHIVE_PLIST=\"${BUILT_PRODUCTS_DIR}/${PACKAGE_NAME}.plist\"\nSIGNING_IDENTITY=\"Developer ID Installer: Your Name\"\n\necho \"Build ${PRODUCT_NAME}\"\n\necho \"analyze ${PACKAGE_ROOT} -> ${ARCHIVE_PLIST}\"\npkgbuild --analyze --root \"${PACKAGE_ROOT}\" \"${ARCHIVE_PLIST}\"\n\npkgbuild --timestamp --sign \"${SIGNING_IDENTITY}\" --scripts \"${SOURCE_ROOT}/Ultraschall/Installer/Scripts\" --version \"${VERSION}\" --timestamp --identifier \"${PRODUCT_BUNDLE_IDENTIFIER}\" --root \"${PACKAGE_ROOT}\" --component-plist \"${ARCHIVE_PLIST}\" \"${ARCHIVE_FILENAME}\"\n\nspctl -a -v --type install \"${ARCHIVE_FILENAME}\"\n\ncp \"${ARCHIVE_FILENAME}\" ~/Desktop";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1266,6 +1265,7 @@
 		280500011BA6375000B847E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1276,7 +1276,7 @@
 				INFOPLIST_FILE = AudioHubManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubManager;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1287,6 +1287,7 @@
 		280500021BA6375000B847E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1297,7 +1298,7 @@
 				INFOPLIST_FILE = AudioHubManager/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubManager;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1315,7 +1316,7 @@
 				);
 				INFOPLIST_FILE = AudioHubManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioHubPreferences.app/Contents/MacOS/AudioHubPreferences";
 			};
@@ -1328,7 +1329,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TEST=1";
 				INFOPLIST_FILE = AudioHubManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubManagerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AudioHubPreferences.app/Contents/MacOS/AudioHubPreferences";
 			};
@@ -1344,7 +1345,7 @@
 				);
 				INFOPLIST_FILE = AudioHubTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1356,7 +1357,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TEST=1";
 				INFOPLIST_FILE = AudioHubTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1378,7 +1379,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1420,7 +1420,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1441,12 +1440,13 @@
 		2805FFB31BA636B100B847E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				INFOPLIST_FILE = AudioHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = driver;
 			};
@@ -1455,12 +1455,13 @@
 		2805FFB41BA636B100B847E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				INFOPLIST_FILE = AudioHub/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = driver;
 			};
@@ -1469,7 +1470,7 @@
 		280DDE231BB8203C009D669B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1477,7 +1478,7 @@
 		280DDE241BB8203C009D669B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1488,9 +1489,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioHubPreferences/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/PreferencePanes";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubPreferences;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubPreferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = prefPane;
@@ -1503,9 +1505,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioHubPreferences/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/PreferencePanes";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubPreferences;
+				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubPreferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = prefPane;
@@ -1515,7 +1518,7 @@
 		28468DEB1BF06D380063D71C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1523,7 +1526,7 @@
 		28468DEC1BF06D380063D71C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHub;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1539,7 +1542,7 @@
 				);
 				INFOPLIST_FILE = Ultraschall/Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1554,7 +1557,7 @@
 				);
 				INFOPLIST_FILE = Ultraschall/Tests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.8plugs.audio.AudioHubTests;
+				PRODUCT_BUNDLE_IDENTIFIER = fm.ultraschall.audio.UltraschallHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
