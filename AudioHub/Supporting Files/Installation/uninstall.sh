@@ -14,9 +14,9 @@ echo "Remove AudioHub Driver"
 sudo rm -rf /Library/Audio/Plug-Ins/HAL/AudioHub.driver > /dev/null
 fi
 
-if [ -d /Library/PreferencePanes/AudioHubPreferences.prefPane ]; then
+if [ -d /Library/PreferencePanes/AudioHub.prefPane ]; then
 echo "Remove AudioHub Preferences"
-sudo rm -rf /Library/PreferencePanes/AudioHubPreferences.prefPane > /dev/null
+sudo rm -rf /Library/PreferencePanes/AudioHub.prefPane > /dev/null
 fi
 
 

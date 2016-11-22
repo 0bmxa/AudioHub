@@ -2,11 +2,11 @@
 launchctl unload /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist
 
 if [ -d /Library/Audio/Plug-Ins/HAL/AudioHub.driver ]; then
-    echo "Remove AudioHub Driver"
+    echo "Removing AudioHub Driver"
     sudo rm -rf /Library/Audio/Plug-Ins/HAL/AudioHub.driver > /dev/null
 fi
 
-if [ -d /Library/PreferencePanes/AudioHubPreferences.prefPane ]; then
-    echo "Remove AudioHub Preferences"
-    sudo rm -rf /Library/PreferencePanes/AudioHubPreferences.prefPane > /dev/null
+if [ -d /Library/PreferencePanes/AudioHub.prefPane ]; then
+    echo "Removing AudioHub PreferencePane"
+    sudo rm -rf /Library/PreferencePanes/AudioHub.prefPane > /dev/null
 fi
