@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "if [ $CONFIGURATION == Release ]; then&#10;echo &quot;Bumping build number...&quot;&#10;plist=${PROJECT_DIR}/${INFOPLIST_FILE}&#10;&#10;# increment the build number (ie 115 to 116)&#10;buildnum=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleVersion&quot; &quot;${plist}&quot;)&#10;if [[ &quot;${buildnum}&quot; == &quot;&quot; ]]; then&#10;echo &quot;No build number in $plist&quot;&#10;exit 2&#10;fi&#10;&#10;buildnum=$(expr $buildnum + 1)&#10;/usr/libexec/Plistbuddy -c &quot;Set CFBundleVersion $buildnum&quot; &quot;${plist}&quot;&#10;echo &quot;Bumped build number to $buildnum&quot;&#10;&#10;else&#10;echo $CONFIGURATION &quot; build - Not bumping build number.&quot;&#10;fi">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "281F1A881BAE8ECC00FC62E1"
-                     BuildableName = "AudioHubPreferences.prefPane"
-                     BlueprintName = "AudioHubPreferences"
-                     ReferencedContainer = "container:AudioHub.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -47,28 +29,37 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "281F1A881BAE8ECC00FC62E1"
-            BuildableName = "AudioHubPreferences.prefPane"
-            BlueprintName = "AudioHubPreferences"
-            ReferencedContainer = "container:AudioHub.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "cp -a &quot;$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME&quot; &quot;$USER_LIBRARY_DIR/PreferencePanes/&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "281F1A881BAE8ECC00FC62E1"
+                     BuildableName = "AudioHubPreferences.prefPane"
+                     BlueprintName = "AudioHubPreferences"
+                     ReferencedContainer = "container:AudioHub.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <PathRunnable
          runnableDebuggingMode = "0"
          BundleIdentifier = "com.apple.systempreferences"
@@ -85,17 +76,10 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME"
+            argument = "$USER_LIBRARY_DIR/PreferencePanes/$FULL_PRODUCT_NAME"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "OBJC_DISABLE_GC"
-            value = "YES"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -105,8 +89,7 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "281F1A881BAE8ECC00FC62E1"
@@ -114,13 +97,13 @@
             BlueprintName = "AudioHubPreferences"
             ReferencedContainer = "container:AudioHub.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      revealArchiveInOrganizer = "NO">
+      revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
