@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -10,13 +10,13 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "if [ $CONFIGURATION == &apos;Release&apos; ]; then&#10;echo &quot;Bumping build number...&quot;&#10;plist=${PROJECT_DIR}/${INFOPLIST_FILE}&#10;&#10;# increment the build number (ie 115 to 116)&#10;buildnum=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleVersion&quot; &quot;${plist}&quot;)&#10;if [[ &quot;${buildnum}&quot; == &quot;&quot; ]]; then&#10;echo &quot;No build number in $plist&quot;&#10;exit 2&#10;fi&#10;&#10;buildnum=$(expr $buildnum + 1)&#10;/usr/libexec/Plistbuddy -c &quot;Set CFBundleVersion $buildnum&quot; &quot;${plist}&quot;&#10;echo &quot;Bumped build number to $buildnum&quot;&#10;&#10;else&#10;echo $CONFIGURATION &quot; build - Not bumping build number.&quot;&#10;fi">
+               scriptText = "#&#10;# Increments the build number for release builds&#10;#&#10;if [ $CONFIGURATION != &apos;Release&apos; ]&#10;then&#10;    echo &quot;${CONFIGURATION} build - Not bumping build number.&quot;&#10;    exit 0;&#10;fi&#10;&#10;&#10;echo &quot;Bumping build number...&quot;&#10;PLIST_FILE=${PROJECT_DIR}/${INFOPLIST_FILE}&#10;&#10;buildnum=$(/usr/libexec/PlistBuddy -c &quot;Print CFBundleVersion&quot; &quot;${PLIST_FILE}&quot;)&#10;if [[ &quot;${buildnum}&quot; == &quot;&quot; ]]; then&#10;    echo &quot;No build number in ${PLIST_FILE}&quot;&#10;    exit 2&#10;fi&#10;&#10;BUILD_NUMBER=$(expr $BUILD_NUMBER + 1)&#10;/usr/libexec/Plistbuddy -c &quot;Set CFBundleVersion ${BUILD_NUMBER}&quot; &quot;${PLIST_FILE}&quot;&#10;echo &quot;Bumped build number to $BUILD_NUMBER&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
-                     BuildableName = "AudioHub.driver"
-                     BlueprintName = "AudioHub"
+                     BuildableName = "AudioHubDriver.driver"
+                     BlueprintName = "AudioHubDriver"
                      ReferencedContainer = "container:AudioHub.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
-               BuildableName = "AudioHub.driver"
-               BlueprintName = "AudioHub"
+               BuildableName = "AudioHubDriver.driver"
+               BlueprintName = "AudioHubDriver"
                ReferencedContainer = "container:AudioHub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -63,19 +63,14 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
-            BuildableName = "AudioHub.driver"
-            BlueprintName = "AudioHub"
+            BuildableName = "AudioHubDriver.driver"
+            BlueprintName = "AudioHubDriver"
             ReferencedContainer = "container:AudioHub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
          <AdditionalOption
             key = "NSZombieEnabled"
-            value = "YES"
-            isEnabled = "YES">
-         </AdditionalOption>
-         <AdditionalOption
-            key = "NSDOLoggingEnabled"
             value = "YES"
             isEnabled = "YES">
          </AdditionalOption>
@@ -91,7 +86,25 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
+      allowLocationSimulation = "NO">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#func reload_async() {&#10;#   sleep 2&#10;    #sudo launchctl unload /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist&#10;    #sudo launchctl load /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist&#10;    #    &quot;${SOURCE_ROOT}/AudioHub/Supporting\ Files/Installation/restart.sh&quot;&#10;    #    sh -c &quot;${SOURCE_ROOT}/AudioHub/Supporting\ Files/Installation/restart.sh&quot;&#10;#}&#10;&#10;#reload_async &amp;&#10;&#10;#osascript -e &apos;do shell script &quot;\&quot;/Users/mxa/Documents/mxa/AudioHub/AudioHub/Supporting Files/Installation/restart.sh\&quot;&quot; with administrator privileges&apos; &amp;&#10;sh -c &quot;${SOURCE_ROOT}/AudioHub/Supporting\ Files/Installation/restart.sh&quot; &amp;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
+                     BuildableName = "AudioHubDriver.driver"
+                     BlueprintName = "AudioHubDriver"
+                     ReferencedContainer = "container:AudioHub.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <PathRunnable
          runnableDebuggingMode = "0"
          FilePath = "/usr/sbin/coreaudiod">
@@ -100,8 +113,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
-            BuildableName = "AudioHub.driver"
-            BlueprintName = "AudioHub"
+            BuildableName = "AudioHubDriver.driver"
+            BlueprintName = "AudioHubDriver"
             ReferencedContainer = "container:AudioHub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -118,8 +131,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2805FFAB1BA636B100B847E4"
-            BuildableName = "AudioHub.driver"
-            BlueprintName = "AudioHub"
+            BuildableName = "AudioHubDriver.driver"
+            BlueprintName = "AudioHubDriver"
             ReferencedContainer = "container:AudioHub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

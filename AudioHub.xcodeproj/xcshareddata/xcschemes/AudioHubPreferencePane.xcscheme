@@ -34,8 +34,8 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = ""
-      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +47,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "cp -a &quot;$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME&quot; &quot;$USER_LIBRARY_DIR/PreferencePanes/&quot;">
+               scriptText = "# Remove existing PrefPane &amp; caches&#10;rm -r &quot;${USER_LIBRARY_DIR}/PreferencePanes/${FULL_PRODUCT_NAME}&quot;&#10;rm    &quot;${USER_LIBRARY_DIR}/Caches/com.apple.preferencepanes.*&quot;&#10;&#10;# Copy new PrefPane into place&#10;cp -aH &quot;${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}&quot; &quot;${USER_LIBRARY_DIR}/PreferencePanes/&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -62,6 +62,7 @@
       </PreActions>
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.systempreferences"
          FilePath = "/Applications/System Preferences.app">
       </PathRunnable>
       <MacroExpansion>
@@ -75,7 +76,7 @@
       </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "$USER_LIBRARY_DIR/PreferencePanes/$FULL_PRODUCT_NAME"
+            argument = "$(USER_LIBRARY_DIR)/PreferencePanes/$(FULL_PRODUCT_NAME)"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

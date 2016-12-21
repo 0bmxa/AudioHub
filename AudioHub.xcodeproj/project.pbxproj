@@ -277,7 +277,7 @@
 		2805011B1BA63A7100B847E4 /* CADispatchQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADispatchQueue.cpp; sourceTree = "<group>"; };
 		2805011C1BA63A7100B847E4 /* CADispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADispatchQueue.h; sourceTree = "<group>"; };
 		2805011E1BA63ABE00B847E4 /* AudioHubTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioHubTypes.h; sourceTree = "<group>"; };
-		2805FFAC1BA636B100B847E4 /* AudioHub.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioHub.driver; sourceTree = BUILT_PRODUCTS_DIR; };
+		2805FFAC1BA636B100B847E4 /* AudioHubDriver.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioHubDriver.driver; sourceTree = BUILT_PRODUCTS_DIR; };
 		2805FFAF1BA636B100B847E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2805FFE91BA6375000B847E4 /* AudioHubManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioHubManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2805FFEB1BA6375000B847E4 /* AudioHubManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioHubManager.h; sourceTree = "<group>"; };
@@ -403,7 +403,7 @@
 		2805FFAD1BA636B100B847E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2805FFAC1BA636B100B847E4 /* AudioHub.driver */,
+				2805FFAC1BA636B100B847E4 /* AudioHubDriver.driver */,
 				2805FFE91BA6375000B847E4 /* AudioHubManager.framework */,
 				2805FFF21BA6375000B847E4 /* AudioHubManagerTests.xctest */,
 				2805010D1BA6398C00B847E4 /* AudioHubTests.xctest */,
@@ -730,9 +730,9 @@
 			productReference = 2805010D1BA6398C00B847E4 /* AudioHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2805FFAB1BA636B100B847E4 /* AudioHub */ = {
+		2805FFAB1BA636B100B847E4 /* AudioHubDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2805FFB21BA636B100B847E4 /* Build configuration list for PBXNativeTarget "AudioHub" */;
+			buildConfigurationList = 2805FFB21BA636B100B847E4 /* Build configuration list for PBXNativeTarget "AudioHubDriver" */;
 			buildPhases = (
 				2805FFA81BA636B100B847E4 /* Sources */,
 				2805FFA91BA636B100B847E4 /* Frameworks */,
@@ -743,9 +743,9 @@
 			dependencies = (
 				280DDE131BB81639009D669B /* PBXTargetDependency */,
 			);
-			name = AudioHub;
+			name = AudioHubDriver;
 			productName = AudioHub;
-			productReference = 2805FFAC1BA636B100B847E4 /* AudioHub.driver */;
+			productReference = 2805FFAC1BA636B100B847E4 /* AudioHubDriver.driver */;
 			productType = "com.apple.product-type.bundle";
 		};
 		2805FFE81BA6375000B847E4 /* AudioHubManager */ = {
@@ -808,7 +808,7 @@
 		2805FFA41BA636B100B847E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "AudioHub Project";
 				TargetAttributes = {
 					2805010C1BA6398C00B847E4 = {
@@ -816,7 +816,7 @@
 					};
 					2805FFAB1BA636B100B847E4 = {
 						CreatedOnToolsVersion = 7.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2805FFE81BA6375000B847E4 = {
 						CreatedOnToolsVersion = 7.0;
@@ -848,7 +848,7 @@
 			projectRoot = "";
 			targets = (
 				2805FFE81BA6375000B847E4 /* AudioHubManager */,
-				2805FFAB1BA636B100B847E4 /* AudioHub */,
+				2805FFAB1BA636B100B847E4 /* AudioHubDriver */,
 				281F1A881BAE8ECC00FC62E1 /* AudioHubPreferences */,
 				280DDE211BB8203C009D669B /* AudioHubInstaller */,
 				2805010C1BA6398C00B847E4 /* AudioHubTests */,
@@ -1021,7 +1021,7 @@
 		};
 		280DDE261BB82042009D669B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2805FFAB1BA636B100B847E4 /* AudioHub */;
+			target = 2805FFAB1BA636B100B847E4 /* AudioHubDriver */;
 			targetProxy = 280DDE251BB82042009D669B /* PBXContainerItemProxy */;
 		};
 		280DDE281BB82042009D669B /* PBXTargetDependency */ = {
@@ -1031,7 +1031,7 @@
 		};
 		28E33A811BB7F6C300B1BE75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2805FFAB1BA636B100B847E4 /* AudioHub */;
+			target = 2805FFAB1BA636B100B847E4 /* AudioHubDriver */;
 			targetProxy = 28E33A801BB7F6C300B1BE75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1052,7 +1052,7 @@
 		280500011BA6375000B847E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1074,7 +1074,7 @@
 		280500021BA6375000B847E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1162,8 +1162,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1203,8 +1205,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1227,10 +1231,8 @@
 		2805FFB31BA636B100B847E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
 				INFOPLIST_FILE = "AudioHub/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
 				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHub;
@@ -1242,9 +1244,8 @@
 		2805FFB41BA636B100B847E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				INFOPLIST_FILE = "AudioHub/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
@@ -1274,7 +1275,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AudioHubPreferences/Supporting Files/Info.plist";
@@ -1282,6 +1282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubPreferences;
 				PRODUCT_NAME = AudioHub;
 				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -1290,7 +1291,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "AudioHubPreferences/Supporting Files/Info.plist";
@@ -1298,6 +1298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = audiohub.audiohub.AudioHubPreferences;
 				PRODUCT_NAME = AudioHub;
 				PROVISIONING_PROFILE = "";
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -1341,7 +1342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2805FFB21BA636B100B847E4 /* Build configuration list for PBXNativeTarget "AudioHub" */ = {
+		2805FFB21BA636B100B847E4 /* Build configuration list for PBXNativeTarget "AudioHubDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2805FFB31BA636B100B847E4 /* Debug */,
