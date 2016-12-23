@@ -6,20 +6,28 @@
 #  Created by Daniel Lindenfelser on 11/09/15.
 #  Copyright © 2015 Daniel Lindenfelser. All rights reserved.
 
-echo "Stop Core Audio Server"
-sudo launchctl unload /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist
+COREAUDIOD_PLIST_PATH='/System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist'
+DRIVER_PATH='/Library/Audio/Plug-Ins/HAL/AudioHub.driver'
+PREFPANE_PATH='/Library/PreferencePanes/AudioHub.prefPane'
 
-if [ -d /Library/Audio/Plug-Ins/HAL/AudioHub.driver ]; then
-echo "Remove AudioHub Driver"
-sudo rm -rf /Library/Audio/Plug-Ins/HAL/AudioHub.driver > /dev/null
+# Stop coreaudiod
+printf "Stopping Core Audio Server... "
+launchctl unload "${COREAUDIOD_PLIST_PATH}"
+[ -z "$(launchctl list | grep coreaudiod)" ] && printf 'OK\n' || printf 'Error\n'
+
+if [ -d "${DRIVER_PATH}" ]; then
+    printf "Removing AudioHub Driver... "
+    sudo rm -rf "${DRIVER_PATH}" > /dev/null
+    [ ! -d "${DRIVER_PATH}" ] && printf "Done\n" || printf "Error\n"
 fi
 
-if [ -d /Library/PreferencePanes/AudioHub.prefPane ]; then
-echo "Remove AudioHub Preferences"
-sudo rm -rf /Library/PreferencePanes/AudioHub.prefPane > /dev/null
+if [ -d "${PREFPANE_PATH}" ]; then
+    printf "Removing AudioHub PreferencePane... "
+    sudo rm -rf "${PREFPANE_PATH}" > /dev/null
+    [ ! -d "${PREFPANE_PATH}" ] && printf "Done\n" || printf "Error\n"
 fi
 
-
-echo "Start Core Audio Server"
-sudo launchctl load /System/Library/LaunchDaemons/com.apple.audio.coreaudiod.plist
-
+# Start coreaudiod
+printf "Starting Core Audio Server... "
+launchctl load "${COREAUDIOD_PLIST_PATH}"
+[ ! -z "$(launchctl list | grep coreaudiod)" ] && printf 'OK\n' || printf 'Error\n'
